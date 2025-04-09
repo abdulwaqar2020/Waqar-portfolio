@@ -18,7 +18,7 @@ const Hero = () => {
           </h3>
           <p>
             Passionate Frontend Developer | Transforming Ideas into Seamless and
-            Visually Stunning Web Solutions
+            Visually Stunning Web Solutions 
           </p>
           <div className='btn-group'>
          
