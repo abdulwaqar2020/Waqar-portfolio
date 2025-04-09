@@ -1,0 +1,100 @@
+.experience-container {
+    position: relative;
+}
+
+.experience-container h5 {
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 4.3rem;
+    font-weight: 600;
+
+}
+
+.arrow-left,
+.arrow-right {
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6751b9;
+    border-radius: 0.65rem;
+    border: 1.5px solid #6751b9;
+    background: #130f2a;
+    position: absolute;
+    top: 58%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.arrow-left span,
+.arrow-right span {
+    margin-top: 5px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.arrow-left {
+    left: -1rem;
+}
+
+.arrow-right {
+    right: -1rem;
+}
+
+@media (max-width:1025px) {
+    .arrow-left {
+        left: 0rem;
+    }
+
+    .arrow-right {
+        right: 0rem;
+    }
+}
+
+@media (max-width:768px) {
+    .experience-container h5 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+}
+
+@media (max-width:320px) {
+    .experience-container h5 {
+        font-size: 1.9rem;
+        margin-bottom: 2rem;
+    }
+
+    .experience-content {
+        margin-left: 20px;
+        width: 150%;
+        height: auto;
+    }
+
+    .experience-content .arrow-left {
+        left: 0.5rem;
+    }
+
+    .experience-content .arrow-right {
+        right: -11rem;
+    }
+
+
+}
+
+@media (max-width:425px) {
+    .experience-container h5 {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .arrow-left {
+        left: -1rem;
+    }
+
+    .arrow-right {
+        right: -1rem;
+    }
+
+}

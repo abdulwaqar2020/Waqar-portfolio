@@ -1,0 +1,555 @@
+.hero-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-container::after,
+.hero-container::before {
+    content: "";
+    width: 28.125rem;
+    height: 28.125rem;
+    border-radius: 28.125rem;
+    background: #7c66e3;
+    position: absolute;
+    z-index: -1;
+    filter: blur(225px);
+}
+
+.hero-container::after {
+    top: -3rem;
+    left: -5rem;
+}
+
+.hero-container::before {
+    bottom: 2rem;
+    right: 0rem;
+}
+
+.hero-content {
+    flex: 1;
+
+}
+
+.hero-content h2 {
+    font-size: 3.8rem;
+    font-weight: 600;
+    line-height: 5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+.hero-img {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6.5rem;
+    margin-top: 5rem;
+
+
+}
+.hero-img .waqar {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+
+}
+
+.hero-img > div {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.hero-img > div > img {
+    width: 25rem;
+    transition: all 0.3s ease;
+}
+
+.tech-icon {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0.65rem;
+    border: 1.5px solid #6852ba;
+
+}
+
+.tech-icon img {
+    width: 2rem;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.hero-img>div>img:hover,
+.tech-icon img:hover {
+    transform: translateY(-0.5rem);
+}
+
+
+
+/* Code for animation */
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.hero-content h3{
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.5rem;
+}
+
+
+.hero-content h2 span{
+    color: aquamarine;
+    transform: translateY(20px);
+    animation: fadeInUp 3s ease-in-out forwards;
+}
+.hero-content h2{
+    font-size: 4rem;
+    color: white;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+   }
+.hero-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.5rem 3.5rem;
+    
+    background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+    box-shadow:0 0 25px  violet;
+    border-radius: 4rem;
+    font-size: 1rem;
+    color: black;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3 ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.btn-group{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+.btn-group a:nth-of-type(1){
+    color: #fff;
+    border: 2px solid transparent;
+    box-shadow: 0 0 25px transparent;
+    
+}
+.btn-group a:nth-of-type(1):hover{
+
+    box-shadow: 0 0 25px transparent;
+    background-color:  #000;
+    color: #fff;
+
+}
+.btn-group a:nth-of-type(2){
+    color: #fff;
+    border: 2px solid transparent;
+    box-shadow: 0 0 25px transparent;
+    
+}
+.btn-group a:nth-of-type(2):hover{
+
+    box-shadow: 0 0 25px transparent;
+    background-color:  #000;
+    color: #fff;
+
+}
+
+ .text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+    
+}
+
+.text-animation span {
+    position: relative;
+    font-size: 3rem;
+}
+.text-animation span::before {
+    content: "Web Developer";
+    color: aquamarine;
+    animation: words 20s infinite;
+
+}
+.text-animation span::after {
+    content: "";
+    background-color: #342a66;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 120%;
+    border-left: 3px solid #080505;
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+
+}
+/* From Uiverse.io by satyamchaudharydev */ 
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #37FF8B;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .btnHC {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnHC::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.6s;
+  transform-origin: center;
+}
+
+.btnHC::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+}
+
+.btnHC:hover::before, .btnHC:hover::after {
+  transform: scale(0)
+}
+
+.btnHC:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--bg-color);
+    }
+}
+
+@keyframes words{
+
+    0%,
+    20%{
+        content: " Frontend Developer";
+    }
+    21%,
+    40%{
+        content: " Web Developer";
+    }
+    41%,
+    60%{
+        content: " Web Designer";
+    }
+    61%,
+    80%{
+        content: " Web Developer";
+    }
+    81%,
+    100%{
+        content: " Software Tester";
+    }
+}
+
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+}
+
+
+@media (max-width:1025px) {
+    .hero-content h2 {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+    }
+
+    .hero-img>div>img {
+        width: 20rem;
+    }
+
+    .tech-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .tech-icon img {
+        width: 2.5rem;
+    }
+
+
+}
+
+@media (max-width: 786px) {
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-img {
+        margin: 2rem 0 2rem 0;
+    }
+
+    .hero-container h2 {
+        margin-top: 3rem;
+    }
+
+    .hero-content h2,
+    .hero-content p {
+        width: auto;
+        text-align: center;
+    }
+
+    .hero-container::after,
+    .hero-container::before {
+        content: "";
+        width: 18rem;
+        height: rem;
+    }
+
+    .hero-container::after {
+        top: 0rem;
+        left: 0rem;
+    }
+
+    .hero-container::before {
+        bottom: 2rem;
+        right: 0rem;
+    }
+}
+
+@media (max-width:600px) {
+    .hero-content h2 {
+        font-size: 2.2rem;
+        line-height: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+
+    }
+
+    .hero-img {
+        gap: 1rem;
+    }
+
+    .hero-img>div>img {
+        width: 16rem;
+    }
+
+    .tech-icon {
+        width: 3.3rem;
+        height: 3.3rem;
+    }
+
+    .tech-icon img {
+        width: 2rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin-left: 5rem;
+        width: 100%;
+
+    }
+
+    .hero-content {
+        text-align: center;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+        line-height: 1.2rem;
+
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .hero-img {
+        margin-top: 2rem;
+        gap: 1rem;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-img>div>img {
+        width: 25rem;
+    }
+
+    .tech-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .tech-icon img {
+        width: 1.8rem;
+    }
+
+    .hero-container::after,
+    .hero-container::before {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .hero-container::after {
+        top: 1rem;
+        left: -3rem;
+    }
+
+    .hero-container::before {
+        bottom: 1rem;
+        right: -3rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin-left: 1rem;
+        width: 140%;
+
+    }
+
+    .hero-content {
+        text-align: center;
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+
+        line-height: 3rem;
+    }
+
+    .hero-content p {
+
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .hero-img {
+        margin-top: 2rem;
+        gap: 1rem;
+        align-items: center;
+        width: 100%;
+    }
+}
