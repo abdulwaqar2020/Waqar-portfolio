@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import ImageLogo from '../assets/images/Waqar.png'
 import MobileNav from './MobileNav/MobileNav';
-import Toggle from '../assets/images/Toggle.png'
+import Toggle from '../assets/images/toggle.png'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
